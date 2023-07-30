@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./js/main.js" defer type="module"></script>
+    <title>Cálculo IMC</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+    <div class="erroAlert">
+        <p>Digite Somentes números</p>
+    </div>
+
+    <form>
+    <div class="card">
+
+        <h1>Cálculo IMC</h1>
+            
+        <div class="input-wrapper">
+            <label for="peso">Peso(kg)</label>
+            <input id="peso" type="text" placeholder="60kg">
+        </div>
+
+        
+        <div class="input-wrapper">
+            <label for="altura">Altura(cm)</label>
+            <input id="altura" type="text" placeholder="185">
+        </div>
+
+                     
+       <button>Calcular IMC <img src="arrow-up-right.svg" alt=""> </button>
+      
+
+        </div>
+    </form>
+
+    <div class="modal-wrapper ">
+        <div class="modalCard">
+            <button class="ButtonClose" > <img src="x-symbol.svg" alt=""> </button>
+            <h2>Seu IMC é X</h2>
+        </div>
+    </div>
+
+
+    </div>
+
+</body>
+</html>
