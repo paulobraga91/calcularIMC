@@ -1,10 +1,10 @@
 import{Modal} from './modal.js'
-import { alertError } from './alert.js'
+import {alertError} from './alert.js'
+import{imc, notAnumber} from './utils.js'
 
 const form = document.querySelector('form')
 const inputPeso = document.querySelector('#peso')
 const inputAltura = document.querySelector('#altura')
-const alerta = document.querySelector('.erroAlert')
 
 form.onsubmit = function(){
     event.preventDefault()
@@ -13,7 +13,7 @@ form.onsubmit = function(){
     const showAlertError = notAnumber(peso) || notAnumber(altura)
 
     if (showAlertError){
-        alertError.open
+        alertError.open()
         return;
     }
 
@@ -23,11 +23,5 @@ form.onsubmit = function(){
     
 }
 
- function imc(peso, altura){
-    return(peso/((altura/100)**2)).toFixed(2)
-}
-
-
-function notAnumber(value){
-    return isNaN(value) || value == ""
-}
+inputPeso.oninput = () => alertError.close()
+inputAltura.oninput = () => alertError.close()

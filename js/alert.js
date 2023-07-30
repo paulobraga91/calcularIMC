@@ -1,12 +1,12 @@
 export const alertError = {
 
-elemento: document.querySelector('.erroAlert'),
+elemento : document.querySelector('.erroAlert'),
 
 open(){ 
-    elemento.classList.add('open')
+    alertError.elemento.classList.add('open')
 },
 close(){
-    elemento.classList.remove('open')
+    alertError.elemento.classList.remove('open')
 }
 
 }
