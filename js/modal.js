@@ -17,3 +17,11 @@ Modal.modalBtnClose.onclick = function(){
 
 }
 
+window.addEventListener('keydown',handledKeydown)
+
+
+function handledKeydown(event){
+    if(event.key === 'Escape'){
+        Modal.close()
+    }
+}
